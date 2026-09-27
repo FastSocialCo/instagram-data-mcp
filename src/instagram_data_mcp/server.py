@@ -117,6 +117,9 @@ def create_server():
     return Server(
         "instagram-data",
         version=__import__(__package__).__version__,
+        title="Instagram Data",
+        description="Read-only public Instagram data for AI agents: profiles, posts, reels, stories, "
+                    "highlights, comments, likers, followers, hashtags, places, audio and search.",
         website_url=SIGNUP_URL,
         instructions="Read-only public Instagram data. Pass a username (with or without @) or a "
                      "post/reel URL. Each call spends API credits; meta.credits_remaining shows the balance.",
