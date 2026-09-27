@@ -1,7 +1,9 @@
 # Changelog
 
 ## 0.1.4
-- npm package (stdio bridge to the remote server) and Agent Plugins manifest.
+- Sign in with OAuth: add the URL and approve in your browser, no key to paste.
+- Agent Plugins manifest now points at the remote URL.
+- npm stdio bridge (published once the npm token is set).
 
 ## 0.1.3
 - Remote MCP server at https://data.fastsocial.co/mcp.

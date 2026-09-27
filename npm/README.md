@@ -13,29 +13,29 @@ Instagram, and nothing can post, follow or like. Public data only.
 
 Sign up at https://fastsocial.co/instagram-api. There is a free plan.
 
-## Connect (no install)
+## Connect (no install, no key to paste)
 
-The server runs at `https://data.fastsocial.co/mcp` (Streamable HTTP). Send your key in the
-`X-API-Key` header.
+Add the server URL to your client. The first time you use it, your client opens a browser page on
+fastsocial.co: sign in with your email code and click Allow. That's it. There is a free plan, and it
+is set up for you on first sign-in.
 
 Claude Code:
 
 ```bash
-claude mcp add --transport http instagram-data https://data.fastsocial.co/mcp --header "X-API-Key: your_key"
+claude mcp add --transport http instagram-data https://data.fastsocial.co/mcp
 ```
 
-Cursor, Claude Desktop and other clients that take a remote server:
+Cursor, Claude Desktop, VS Code and other clients that take a remote server:
 
 ```json
 {
   "mcpServers": {
-    "instagram-data": {
-      "url": "https://data.fastsocial.co/mcp",
-      "headers": { "X-API-Key": "your_key" }
-    }
+    "instagram-data": { "url": "https://data.fastsocial.co/mcp" }
   }
 }
 ```
+
+Prefer an API key? Send it as an `X-API-Key` header instead and skip the sign-in.
 
 ## Or run it locally
 

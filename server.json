@@ -8,12 +8,12 @@
     "url": "https://github.com/FastSocialCo/instagram-data-mcp",
     "source": "github"
   },
-  "version": "0.1.3",
+  "version": "0.1.4",
   "packages": [
     {
       "registryType": "pypi",
       "identifier": "instagram-data-mcp",
-      "version": "0.1.3",
+      "version": "0.1.4",
       "runtimeHint": "uvx",
       "transport": {
         "type": "stdio"
@@ -35,8 +35,8 @@
       "headers": [
         {
           "name": "X-API-Key",
-          "description": "Your Instagram Data API key. Free keys at https://fastsocial.co/instagram-api",
-          "isRequired": true,
+          "description": "Optional. Without it your client signs you in with OAuth. With it, your Instagram Data API key (https://fastsocial.co/instagram-api).",
+          "isRequired": false,
           "isSecret": true
         }
       ]
