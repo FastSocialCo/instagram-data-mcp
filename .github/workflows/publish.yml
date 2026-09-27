@@ -28,16 +28,21 @@ jobs:
       contents: read
     env:
       NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      # setup-node exports a placeholder NODE_AUTH_TOKEN when the secret is missing, so test the secret itself.
+      HAS_NPM_TOKEN: ${{ secrets.NPM_TOKEN != '' }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: "22"
           registry-url: "https://registry.npmjs.org"
-      - name: Publish (skipped when NPM_TOKEN is not set)
+      - name: Skip notice
+        if: env.HAS_NPM_TOKEN != 'true'
+        run: echo "NPM_TOKEN secret not set; skipping npm publish"
+      - name: Publish
+        if: env.HAS_NPM_TOKEN == 'true'
         working-directory: npm
         run: |
-          if [ -z "$NODE_AUTH_TOKEN" ]; then echo "NPM_TOKEN not set; skipping npm publish"; exit 0; fi
           V=$(python3 -c "import json;print(json.load(open('../server.json'))['version'])")
           npm version "$V" --no-git-tag-version --allow-same-version
           npm publish --provenance --access public
