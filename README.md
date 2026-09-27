@@ -1,5 +1,7 @@
 # instagram-data-mcp
 
+<!-- mcp-name: io.github.FastSocialCo/instagram-data-mcp -->
+
 An MCP server for public Instagram data. It gives Claude, Cursor and any other MCP client
 27 read-only tools: profiles, posts, reels, stories, highlights, comments, likers,
 followers, hashtags, places, audio and search.
