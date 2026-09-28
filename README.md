@@ -188,8 +188,8 @@ Full reference: https://fastsocial.co/instagram-api/docs
 ## Local version
 
 If your client only runs local (stdio) servers, the same tools are on PyPI as
-`instagram-data-mcp`. It is not part of this plugin. Its source is the
-[`v0.1.4` tag of this repository](https://github.com/FastSocialCo/instagram-data-mcp/tree/v0.1.4).
+`instagram-data-mcp`. It is not part of this plugin. Its source is
+[FastSocialCo/instagram-data-mcp-python](https://github.com/FastSocialCo/instagram-data-mcp-python).
 
 ## Links
 
