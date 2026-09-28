@@ -306,7 +306,7 @@
     },
     {
       "name": "instagram_likers",
-      "description": "Get accounts that liked an Instagram post. A sample of accounts that liked a post, plus the total like count.\n\nCost: 3 credits.",
+      "description": "Get accounts that liked an Instagram post. A sample of accounts that liked a public post, plus the total like count. One page per call with no cursor, so it is not the full list of likers.\n\nCost: 3 credits.",
       "inputSchema": {
         "type": "object",
         "properties": {
@@ -356,7 +356,7 @@
     },
     {
       "name": "instagram_followers",
-      "description": "Get an account's followers. Public follower list of a public account, with the total follower count. Page with cursor where available.\n\nCost: 3 credits.",
+      "description": "Get an account's followers. One page of the accounts that follow a public account, with the total follower count. Pass next_cursor back as cursor for the next page; null means no more pages are available. Private accounts return 422 private_account.\n\nCost: 3 credits.",
       "inputSchema": {
         "type": "object",
         "properties": {
@@ -385,7 +385,7 @@
     },
     {
       "name": "instagram_following",
-      "description": "Get accounts an account follows. Who a public account follows, with the total. Page with cursor.\n\nCost: 3 credits.",
+      "description": "Get accounts an account follows. One page of the accounts a public account follows, with the total. Pass next_cursor back as cursor for the next page; null means no more pages are available. Private accounts return 422 private_account.\n\nCost: 3 credits.",
       "inputSchema": {
         "type": "object",
         "properties": {
