@@ -1,3 +1,4 @@
-dist/
-__pycache__/
-*.egg-info/
+.schemas/
+node_modules/
+mcp-publisher
+.mcpregistry_*

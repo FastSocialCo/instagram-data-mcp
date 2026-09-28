@@ -1,0 +1,58 @@
+name: Validate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  SPEC_SHA: ff8ab5e392cc87bd88d87c060815a87490e51003
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Fetch schemas
+        run: |
+          mkdir -p .schemas
+          base="https://raw.githubusercontent.com/agentplugins/agent-plugins-spec/$SPEC_SHA/schemas/1.1.0"
+          curl -fsSL "$base/plugin.schema.json" -o .schemas/plugin.schema.json
+          curl -fsSL "$base/mcp.schema.json" -o .schemas/mcp.schema.json
+          curl -fsSL "$(jq -r '."$schema"' server.json)" -o .schemas/server.schema.json
+
+      - name: Agent Plugins manifest
+        run: npx -y -p ajv-cli@5 -p ajv-formats@3 ajv validate --spec=draft2020 -c ajv-formats -s .schemas/plugin.schema.json -d plugin.json
+
+      - name: Agent Plugins MCP configuration
+        run: npx -y -p ajv-cli@5 -p ajv-formats@3 ajv validate --spec=draft2020 -c ajv-formats -s .schemas/mcp.schema.json -d mcp.json
+
+      - name: MCP Registry server.json
+        run: npx -y -p ajv-cli@5 -p ajv-formats@3 ajv validate --strict=false -c ajv-formats -s .schemas/server.schema.json -d server.json
+
+      - name: Manifest copies agree
+        run: |
+          node -e '
+            const fs = require("fs");
+            const read = (p) => JSON.parse(fs.readFileSync(p, "utf8"));
+            const root = read("plugin.json");
+            const mcp = read("mcp.json").mcpServers["instagram-data"];
+            const server = read("server.json");
+            const cursor = read(".cursor-plugin/plugin.json");
+            const errors = [];
+            for (const f of ["name", "version", "description", "homepage", "repository", "license", "author", "keywords"]) {
+              if (JSON.stringify(cursor[f]) !== JSON.stringify(root[f])) errors.push(`.cursor-plugin/plugin.json: ${f} differs from plugin.json`);
+            }
+            if (server.version !== root.version) errors.push("server.json: version differs from plugin.json");
+            if (server.remotes[0].url !== mcp.url) errors.push("server.json: remote URL differs from mcp.json");
+            if (errors.length) { console.error(errors.join("\n")); process.exit(1); }
+            console.log("All manifests agree.");
+          '
