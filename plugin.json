@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.1.0/plugin.schema.json",
   "name": "instagram-data",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Read-only public Instagram data for AI agents: profiles, posts, reels, stories, highlights, comments, hashtags and search. Remote server; sign in from your browser, no key to paste.",
   "author": {
     "name": "FastSocial",
