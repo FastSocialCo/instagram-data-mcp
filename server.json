@@ -2,18 +2,18 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.FastSocialCo/instagram-data-mcp",
   "title": "Instagram Data",
-  "description": "Read-only public Instagram data: profiles, posts, reels, stories, highlights, comments, hashtags.",
+  "description": "Read-only public Instagram data: profiles, posts, reels, stories, comments, top-accounts ranking.",
   "websiteUrl": "https://fastsocial.co/instagram-api",
   "repository": {
     "url": "https://github.com/FastSocialCo/instagram-data-mcp",
     "source": "github"
   },
-  "version": "0.1.5",
+  "version": "0.1.6",
   "packages": [
     {
       "registryType": "pypi",
       "identifier": "instagram-data-mcp",
-      "version": "0.1.4",
+      "version": "0.1.5",
       "runtimeHint": "uvx",
       "transport": {
         "type": "stdio"

@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.1.6
+- Registry entry points at PyPI instagram-data-mcp 0.1.5, which adds the `instagram_top_accounts` tool (daily ranking of the 2,000 most-followed accounts). The remote server already had it.
+
 ## 0.1.5
 - This repository now holds only the plugin manifests for the remote server. The local Python
   package is unchanged on PyPI; its source stays at tag v0.1.4. The npm stdio bridge, never
