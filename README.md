@@ -1,8 +1,8 @@
 # Instagram Data MCP server
 
 Connect your AI assistant to FastSocial's Instagram Data API, and it can look up public Instagram
-profiles, posts, reels, stories, highlights, comments, hashtags, places and audio. It only reads.
-Nothing logs in to Instagram, and nothing can post, follow, like or send messages.
+profiles, posts, reels, stories, highlights, comments, hashtags, places and audio. Read-only: it
+never posts, follows, likes or sends messages.
 
 The server is remote. There is nothing to install or run: your assistant talks to
 
