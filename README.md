@@ -141,7 +141,7 @@ Keep the key out of files you commit.
   minors): https://fastsocial.co/instagram-api/docs
 - Reporting a security problem: [SECURITY.md](SECURITY.md)
 
-## The 27 tools
+## The 28 tools
 
 Each call costs credits from your monthly allowance. Failed calls cost nothing. Every tool is
 read-only.
@@ -150,7 +150,7 @@ read-only.
 |---|---|---|---|
 | `instagram_profile` | Get an Instagram profile | `username` or `user_id` | 1 |
 | `instagram_user_id` | Instagram username to user id | `username` or `user_id` | 1 |
-| `instagram_username` | Instagram user id to username | `user_id` | 3 |
+| `instagram_username` | Instagram user id to username | `user_id` | 2 |
 | `instagram_check` | Check if an Instagram handle exists and is public | `username` | 1 |
 | `instagram_posts` | Get recent Instagram posts | `username` or `user_id`, `cursor` | 1 |
 | `instagram_reels` | Get an account's Instagram reels | `username` or `user_id`, `cursor` | 1 |
@@ -174,6 +174,7 @@ read-only.
 | `instagram_audio` | Get an Instagram audio track and the reels using it | `id` | 1 |
 | `instagram_audio_search` | Search Instagram music and sounds | `q` | 3 |
 | `instagram_reels_search` | Search Instagram reels by keyword | `q`, `cursor` | 3 |
+| `instagram_top_accounts` | Daily ranking of the 2,000 most-followed accounts | `sort`, `limit` | 0 |
 | `instagram_usage` | Your credits used and left this month | none | 0 |
 
 Full reference: https://fastsocial.co/instagram-api/docs

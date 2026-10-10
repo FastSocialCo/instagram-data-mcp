@@ -60,7 +60,7 @@
     },
     {
       "name": "instagram_username",
-      "description": "Instagram user id to username. The current handle for a numeric user id, which still works after the account renames itself.\n\nCost: 3 credits.",
+      "description": "Instagram user id to username. The current handle for a numeric user id, which still works after the account renames itself.\n\nCost: 2 credits.",
       "inputSchema": {
         "type": "object",
         "properties": {
@@ -699,5 +699,5 @@
       }
     }
   ],
-  "version": "0.1.6"
+  "version": "0.1.7"
 }
