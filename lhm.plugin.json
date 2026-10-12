@@ -2,7 +2,7 @@
   "author": "FastSocialCo",
   "authorUrl": "https://github.com/FastSocialCo",
   "description": "Read-only public Instagram data for AI agents: profiles, posts, reels, stories, highlights, comments, likers, followers, hashtags, places, audio and search.",
-  "homepage": "https://fastsocial.co/instagram-api",
+  "homepage": "https://fastsocial.co/instagram-api?ref=lobehub",
   "identifier": "fastsocialco-instagram-data-mcp",
   "name": "Instagram Data",
   "prompts": [],
@@ -699,5 +699,5 @@
       }
     }
   ],
-  "version": "0.1.7"
+  "version": "0.1.8"
 }

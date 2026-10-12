@@ -3,17 +3,17 @@
   "name": "io.github.FastSocialCo/instagram-data-mcp",
   "title": "Instagram Data",
   "description": "Read-only public Instagram data: profiles, posts, reels, stories, comments, top-accounts ranking.",
-  "websiteUrl": "https://fastsocial.co/instagram-api",
+  "websiteUrl": "https://fastsocial.co/instagram-api?ref=mcp-registry",
   "repository": {
     "url": "https://github.com/FastSocialCo/instagram-data-mcp",
     "source": "github"
   },
-  "version": "0.1.7",
+  "version": "0.1.8",
   "packages": [
     {
       "registryType": "pypi",
       "identifier": "instagram-data-mcp",
-      "version": "0.1.6",
+      "version": "0.1.7",
       "runtimeHint": "uvx",
       "transport": {
         "type": "stdio"
@@ -21,7 +21,7 @@
       "environmentVariables": [
         {
           "name": "IG_DATA_API_KEY",
-          "description": "Your Instagram Data API key. Free keys at https://fastsocial.co/instagram-api",
+          "description": "Your Instagram Data API key. Free keys at https://fastsocial.co/instagram-api?ref=mcp-registry",
           "isRequired": true,
           "isSecret": true
         }
@@ -35,7 +35,7 @@
       "headers": [
         {
           "name": "X-API-Key",
-          "description": "Optional. Without it your client signs you in with OAuth. With it, your Instagram Data API key (https://fastsocial.co/instagram-api).",
+          "description": "Optional. Without it your client signs you in with OAuth. With it, your Instagram Data API key (https://fastsocial.co/instagram-api?ref=mcp-registry).",
           "isRequired": false,
           "isSecret": true
         }

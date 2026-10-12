@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.1.8
+- Links to fastsocial.co carry `?ref=` so we can see which listing sent a visitor. Registry entry points at PyPI instagram-data-mcp 0.1.7.
+
 ## 0.1.6
 - Registry entry points at PyPI instagram-data-mcp 0.1.5, which adds the `instagram_top_accounts` tool (daily ranking of the 2,000 most-followed accounts). The remote server already had it.
 

@@ -123,7 +123,7 @@ public clients.
 
 ### Using an API key instead
 
-If your client can set a header but can't sign in, get a key at https://fastsocial.co/instagram-api
+If your client can set a header but can't sign in, get a key at https://fastsocial.co/instagram-api?ref=github
 and send it on every request as `X-API-Key: YOUR_KEY` (or `Authorization: Bearer YOUR_KEY`). For
 Claude Code:
 
@@ -138,7 +138,7 @@ Keep the key out of files you commit.
 - Privacy policy: https://fastsocial.co/privacy
 - Terms: https://fastsocial.co/terms
 - Use policy for the data (public data only, no tracking or harassing people, nothing about
-  minors): https://fastsocial.co/instagram-api/docs
+  minors): https://fastsocial.co/instagram-api/docs?ref=github
 - Reporting a security problem: [SECURITY.md](SECURITY.md)
 
 ## The 28 tools
@@ -177,7 +177,7 @@ read-only.
 | `instagram_top_accounts` | Daily ranking of the 2,000 most-followed accounts | `sort`, `limit` | 0 |
 | `instagram_usage` | Your credits used and left this month | none | 0 |
 
-Full reference: https://fastsocial.co/instagram-api/docs
+Full reference: https://fastsocial.co/instagram-api/docs?ref=github
 
 ## Things to ask it
 
@@ -194,8 +194,8 @@ If your client only runs local (stdio) servers, the same tools are on PyPI as
 
 ## Links
 
-- Instagram Data API: https://fastsocial.co/instagram-api
-- Docs: https://fastsocial.co/instagram-api/docs
+- Instagram Data API: https://fastsocial.co/instagram-api?ref=github
+- Docs: https://fastsocial.co/instagram-api/docs?ref=github
 - OpenAPI spec: https://fastsocial.co/instagram-api/openapi.json
 - MCP Registry entry: `io.github.FastSocialCo/instagram-data-mcp`
 
