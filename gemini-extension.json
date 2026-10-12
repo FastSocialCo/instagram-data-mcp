@@ -1,0 +1,10 @@
+{
+  "name": "instagram-data",
+  "version": "0.1.8",
+  "description": "Read-only public Instagram data: profiles, posts, reels, stories, comments and daily top-accounts charts, as JSON. Signs in with OAuth on first use; free plan with 50 credits a month.",
+  "mcpServers": {
+    "instagram-data": {
+      "httpUrl": "https://data.fastsocial.co/mcp"
+    }
+  }
+}
