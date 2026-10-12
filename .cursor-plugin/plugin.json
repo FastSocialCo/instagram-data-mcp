@@ -4,9 +4,9 @@
   "description": "Read-only public Instagram data for AI agents: profiles, posts, reels, stories, highlights, comments, hashtags and search. Remote server; sign in from your browser, no key to paste.",
   "author": {
     "name": "FastSocial",
-    "url": "https://fastsocial.co/instagram-api?ref=cursor"
+    "url": "https://fastsocial.co/instagram-api?ref=plugin"
   },
-  "homepage": "https://fastsocial.co/instagram-api?ref=cursor",
+  "homepage": "https://fastsocial.co/instagram-api?ref=plugin",
   "repository": "https://github.com/FastSocialCo/instagram-data-mcp",
   "license": "MIT",
   "keywords": [
